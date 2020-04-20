@@ -203,13 +203,13 @@ class Number{
 		return this.v
 	}
 	get_width(){
-		if (this.v==Infinity){return _size("âˆž").w}
-		if (this.v==-Infinity){return _size("-âˆž").w}
+		if (this.v==Infinity){return _size("∞").w}
+		if (this.v==-Infinity){return _size("-∞").w}
 		return _size(this.v).w
 	}
 	get_height(){
-		if (this.v==Infinity){return _size("âˆž").h}
-		if (this.v==-Infinity){return _size("-âˆž").h}
+		if (this.v==Infinity){return _size("∞").h}
+		if (this.v==-Infinity){return _size("-∞").h}
 		return _size(this.v).h
 	}
 	_fr(){
@@ -339,7 +339,7 @@ function draw(eq){
 			else if (k.number==true&&(k.v==Infinity||k.v==-Infinity)){
 				var d=document.createElement("div")
 				d.classList.add("infinity")
-				d.innerText=(k.v==-Infinity?"-":"")+"âˆž"
+				d.innerText=(k.v==-Infinity?"-":"")+"∞"
 				d.style.top=`${(ys+ye)/2+ys}px`
 				d.style.left=`${xs+k.get_width()/2}px`
 				dv.appendChild(d)
